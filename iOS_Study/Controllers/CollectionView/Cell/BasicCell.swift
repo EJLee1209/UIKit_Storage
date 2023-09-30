@@ -16,10 +16,12 @@ final class BasicCell: UICollectionViewCell {
         return iv
     }()
     
+    static let identifier = "BasicCell"
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemBlue
         
+        backgroundColor = .systemBlue
         clipsToBounds = true
         layer.cornerRadius = 12
         contentView.addSubview(imageView)

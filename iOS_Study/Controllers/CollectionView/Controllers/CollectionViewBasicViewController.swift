@@ -13,7 +13,7 @@ class CollectionViewBasicViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.register(BasicCell.self, forCellWithReuseIdentifier: "basicCell")
+        cv.register(BasicCell.self, forCellWithReuseIdentifier: BasicCell.identifier)
         cv.dataSource = self
         cv.delegate = self
         return cv
@@ -53,7 +53,7 @@ extension CollectionViewBasicViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! BasicCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BasicCell.identifier, for: indexPath) as! BasicCell
         cell.bind(imageUrl: dataSource[indexPath.row])
         return cell
     }
