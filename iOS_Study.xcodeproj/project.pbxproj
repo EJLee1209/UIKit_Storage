@@ -67,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF92B7042AC85D4C00E851CE /* Subject */ = {
+			isa = PBXGroup;
+			children = (
+				CFF1B0362AC1749300F5942F /* StudySubject.swift */,
+				CFF1B03B2AC1759B00F5942F /* CollectionViewSubject.swift */,
+			);
+			path = Subject;
+			sourceTree = "<group>";
+		};
 		CFDF33822AC82A1C009AB07F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF1B02C2AC171B400F5942F /* App */,
-				CFF1B0352AC1748B00F5942F /* Model */,
-				CFF1B0382AC174B700F5942F /* Controllers */,
+				CFF1B0382AC174B700F5942F /* View */,
 				CFF1B0212AC1719E00F5942F /* Assets.xcassets */,
 				CFF1B0232AC1719E00F5942F /* LaunchScreen.storyboard */,
 				CFF1B0262AC1719E00F5942F /* Info.plist */,
@@ -136,23 +144,15 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		CFF1B0352AC1748B00F5942F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CFF1B0362AC1749300F5942F /* StudySubject.swift */,
-				CFF1B03B2AC1759B00F5942F /* CollectionViewSubject.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CFF1B0382AC174B700F5942F /* Controllers */ = {
+		CFF1B0382AC174B700F5942F /* View */ = {
 			isa = PBXGroup;
 			children = (
 				CFF1B02D2AC1720A00F5942F /* RootViewController.swift */,
+				CF92B7042AC85D4C00E851CE /* Subject */,
 				CFF1B03F2AC1762C00F5942F /* CollectionView */,
 				CFF1B0422AC180A900F5942F /* AnimationViewController.swift */,
 			);
-			path = Controllers;
+			path = View;
 			sourceTree = "<group>";
 		};
 		CFF1B03F2AC1762C00F5942F /* CollectionView */ = {

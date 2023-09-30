@@ -18,7 +18,7 @@ class CompositionalViewController: UIViewController {
     }()
     
     private var size: Int {
-        (300...800).randomElement()!
+        (300...500).randomElement()!
     }
     
     private lazy var sectionItems: [MySection] = [
