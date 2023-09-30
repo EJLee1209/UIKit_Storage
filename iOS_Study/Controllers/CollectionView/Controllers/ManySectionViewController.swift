@@ -22,6 +22,7 @@ final class ManySectionViewController: UIViewController {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.register(BasicCell.self, forCellWithReuseIdentifier: "basicCell")
         cv.register(MyHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MyHeaderView.identifier)
+        cv.register(MyFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: MyFooterView.identifier)
         cv.dataSource = self
         cv.delegate = self
         return cv
@@ -127,6 +128,28 @@ extension ManySectionViewController: UICollectionViewDataSource {
             }
             
             return headerView
+            
+        case UICollectionView.elementKindSectionFooter:
+            let footerView = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: MyFooterView.identifier,
+                for: indexPath
+            ) as! MyFooterView
+            
+            switch sectionItems[indexPath.section] {
+            case .first(_):
+                footerView.bind(text: "First Section's Footer View")
+            case .second(_):
+                footerView.bind(text: "Second Section's Footer View")
+            case .third(_):
+                footerView.bind(text: "Third Section's Footer View")
+            case .fourth(_):
+                footerView.bind(text: "Fourth Section's Footer View")
+            case .fifth(_):
+                footerView.bind(text: "Fifth Section's Footer View")
+            }
+            
+            return footerView
         default:
             return UICollectionReusableView()
         }
@@ -143,7 +166,7 @@ extension ManySectionViewController: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         insetForSectionAt section: Int
     ) -> UIEdgeInsets {
-        return .init(top: 10, left: cellSpace, bottom: 50, right: cellSpace)
+        return .init(top: 10, left: cellSpace, bottom: 10, right: cellSpace)
     }
     
     /// Cell 크기
@@ -179,5 +202,9 @@ extension ManySectionViewController: UICollectionViewDelegateFlowLayout {
     // header 크기
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: self.view.frame.width, height: 30)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: self.view.frame.width, height: 50)
     }
 }

@@ -12,6 +12,7 @@
 		CFDF33872AC83E2D009AB07F /* ManySectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33862AC83E2D009AB07F /* ManySectionViewController.swift */; };
 		CFDF33892AC84347009AB07F /* MyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33882AC84347009AB07F /* MyHeaderView.swift */; };
 		CFDF338B2AC846D7009AB07F /* HorizonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF338A2AC846D7009AB07F /* HorizonViewController.swift */; };
+		CFDF338D2AC849E3009AB07F /* MyFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF338C2AC849E3009AB07F /* MyFooterView.swift */; };
 		CFF1B0192AC1719D00F5942F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1B0182AC1719D00F5942F /* AppDelegate.swift */; };
 		CFF1B01B2AC1719D00F5942F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1B01A2AC1719D00F5942F /* SceneDelegate.swift */; };
 		CFF1B0222AC1719E00F5942F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF1B0212AC1719E00F5942F /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		CFDF33862AC83E2D009AB07F /* ManySectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManySectionViewController.swift; sourceTree = "<group>"; };
 		CFDF33882AC84347009AB07F /* MyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeaderView.swift; sourceTree = "<group>"; };
 		CFDF338A2AC846D7009AB07F /* HorizonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonViewController.swift; sourceTree = "<group>"; };
+		CFDF338C2AC849E3009AB07F /* MyFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFooterView.swift; sourceTree = "<group>"; };
 		CFF1B0152AC1719D00F5942F /* iOS_Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Study.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF1B0182AC1719D00F5942F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFF1B01A2AC1719D00F5942F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,15 @@
 				CFDF33832AC82AD8009AB07F /* BasicCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		CFDF338E2AC849E8009AB07F /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				CFDF33882AC84347009AB07F /* MyHeaderView.swift */,
+				CFDF338C2AC849E3009AB07F /* MyFooterView.swift */,
+			);
+			path = ReusableView;
 			sourceTree = "<group>";
 		};
 		CFF1B00C2AC1719D00F5942F = {
@@ -144,7 +155,7 @@
 			children = (
 				CFDF33822AC82A1C009AB07F /* Controllers */,
 				CFDF33852AC82ADF009AB07F /* Cell */,
-				CFDF33882AC84347009AB07F /* MyHeaderView.swift */,
+				CFDF338E2AC849E8009AB07F /* ReusableView */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -228,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF1B0412AC176BF00F5942F /* DynamicHeightCell.swift in Sources */,
+				CFDF338D2AC849E3009AB07F /* MyFooterView.swift in Sources */,
 				CFF1B0192AC1719D00F5942F /* AppDelegate.swift in Sources */,
 				CFF1B01B2AC1719D00F5942F /* SceneDelegate.swift in Sources */,
 				CFF1B0372AC1749300F5942F /* StudySubject.swift in Sources */,
