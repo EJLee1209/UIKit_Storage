@@ -11,6 +11,7 @@
 		CFDF33842AC82AD8009AB07F /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33832AC82AD8009AB07F /* BasicCell.swift */; };
 		CFDF33872AC83E2D009AB07F /* ManySectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33862AC83E2D009AB07F /* ManySectionViewController.swift */; };
 		CFDF33892AC84347009AB07F /* MyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33882AC84347009AB07F /* MyHeaderView.swift */; };
+		CFDF338B2AC846D7009AB07F /* HorizonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF338A2AC846D7009AB07F /* HorizonViewController.swift */; };
 		CFF1B0192AC1719D00F5942F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1B0182AC1719D00F5942F /* AppDelegate.swift */; };
 		CFF1B01B2AC1719D00F5942F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1B01A2AC1719D00F5942F /* SceneDelegate.swift */; };
 		CFF1B0222AC1719E00F5942F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFF1B0212AC1719E00F5942F /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		CFDF33832AC82AD8009AB07F /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 		CFDF33862AC83E2D009AB07F /* ManySectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManySectionViewController.swift; sourceTree = "<group>"; };
 		CFDF33882AC84347009AB07F /* MyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeaderView.swift; sourceTree = "<group>"; };
+		CFDF338A2AC846D7009AB07F /* HorizonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonViewController.swift; sourceTree = "<group>"; };
 		CFF1B0152AC1719D00F5942F /* iOS_Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Study.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFF1B0182AC1719D00F5942F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFF1B01A2AC1719D00F5942F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				CFF1B03D2AC1762600F5942F /* DynamicHeightCollectionViewController.swift */,
 				CFDF33802AC82A0E009AB07F /* CollectionViewBasicViewController.swift */,
 				CFDF33862AC83E2D009AB07F /* ManySectionViewController.swift */,
+				CFDF338A2AC846D7009AB07F /* HorizonViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				CFF1B0432AC180A900F5942F /* AnimationViewController.swift in Sources */,
 				CFF1B03E2AC1762600F5942F /* DynamicHeightCollectionViewController.swift in Sources */,
 				CFDF33842AC82AD8009AB07F /* BasicCell.swift in Sources */,
+				CFDF338B2AC846D7009AB07F /* HorizonViewController.swift in Sources */,
 				CFDF33812AC82A0E009AB07F /* CollectionViewBasicViewController.swift in Sources */,
 				CFF1B03C2AC1759B00F5942F /* CollectionViewSubject.swift in Sources */,
 				CFDF33872AC83E2D009AB07F /* ManySectionViewController.swift in Sources */,

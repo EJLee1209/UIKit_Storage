@@ -16,10 +16,12 @@ final class AnimationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        layout()
     }
     
-    
     //MARK: - Helpers
-    
+    private func layout() {
+        view.backgroundColor = .white
+    }
     
 }

@@ -10,6 +10,9 @@ import UIKit
 enum MySection {
     case first([String])
     case second([String])
+    case third([String])
+    case fourth([String])
+    case fifth([String])
 }
 
 final class ManySectionViewController: UIViewController {
@@ -27,8 +30,11 @@ final class ManySectionViewController: UIViewController {
     private let numberOfColumn: CGFloat = 2
     
     private let sectionItems: [MySection] = [
-        MySection.first((1...10).map { "First \($0)" }),
-        MySection.second((1...10).map { "Second \($0)" })
+        MySection.first((1...2).map { "First \($0)" }),
+        MySection.second((1...6).map { "Second \($0)" }),
+        MySection.third((1...8).map { "Third \($0)" }),
+        MySection.fourth((1...4).map { "Fourth \($0)" }),
+        MySection.fifth((1...10).map { "Fifth \($0)" }),
     ]
     
     
@@ -65,6 +71,12 @@ extension ManySectionViewController: UICollectionViewDataSource {
             return sectionItem.count
         case .second(let sectionItem):
             return sectionItem.count
+        case .third(let sectionItem):
+            return sectionItem.count
+        case .fourth(let sectionItem):
+            return sectionItem.count
+        case .fifth(let sectionItem):
+            return sectionItem.count
         }
     }
     
@@ -75,6 +87,12 @@ extension ManySectionViewController: UICollectionViewDataSource {
         case .first(let sectionItem):
             cell.bind(text: sectionItem[indexPath.row])
         case .second(let sectionItem):
+            cell.bind(text: sectionItem[indexPath.row])
+        case .third(let sectionItem):
+            cell.bind(text: sectionItem[indexPath.row])
+        case .fourth(let sectionItem):
+            cell.bind(text: sectionItem[indexPath.row])
+        case .fifth(let sectionItem):
             cell.bind(text: sectionItem[indexPath.row])
         }
         
@@ -100,6 +118,12 @@ extension ManySectionViewController: UICollectionViewDataSource {
                 headerView.bind(text: "First Section")
             case .second(_):
                 headerView.bind(text: "Second Section")
+            case .third(_):
+                headerView.bind(text: "Third Section")
+            case .fourth(_):
+                headerView.bind(text: "Fourth Section")
+            case .fifth(_):
+                headerView.bind(text: "Fifth Section")
             }
             
             return headerView

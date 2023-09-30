@@ -65,6 +65,8 @@ extension CollectionViewController: UITableViewDelegate {
             toVC = DynamicHeightCollectionViewController()
         case .manySection:
             toVC = ManySectionViewController()
+        case .horizontal:
+            toVC = HorizonViewController()
         }
         
         navigationController?.pushViewController(toVC, animated: true)

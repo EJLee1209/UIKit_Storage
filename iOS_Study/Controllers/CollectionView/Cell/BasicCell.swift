@@ -21,6 +21,8 @@ final class BasicCell: UICollectionViewCell {
         super.init(frame: frame)
         backgroundColor = .systemBlue
         
+        clipsToBounds = true
+        layer.cornerRadius = 12
         contentView.addSubview(textLabel)
         textLabel.snp.makeConstraints { make in
             make.edges.equalToSuperview()
