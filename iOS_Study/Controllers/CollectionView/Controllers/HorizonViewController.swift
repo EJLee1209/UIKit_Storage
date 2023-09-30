@@ -22,6 +22,13 @@ class HorizonViewController: UIViewController {
     }()
     
     private let cellSpace: CGFloat = 10
+    
+    private var size: Int {
+        (100...800).randomElement()!
+    }
+    
+    lazy var dataSource = (1...30)
+        .compactMap { _ in URL(string: "https://random.imagecdn.app/\(size)/\(size)") }
 
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -48,12 +55,12 @@ class HorizonViewController: UIViewController {
 //MARK: - UICollectionViewDataSource
 extension HorizonViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return dataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! BasicCell
-        cell.bind(text: "Cell \(indexPath.row)")
+        cell.bind(imageUrl: dataSource[indexPath.row])
         return cell
     }
     

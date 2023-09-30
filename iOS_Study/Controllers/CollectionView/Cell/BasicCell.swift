@@ -9,12 +9,11 @@ import UIKit
 
 final class BasicCell: UICollectionViewCell {
     
-    private let textLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 22)
-        label.textColor = .white
-        label.textAlignment = .center
-        return label
+    private let imageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFill
+        iv.backgroundColor = .lightGray
+        return iv
     }()
     
     override init(frame: CGRect) {
@@ -23,8 +22,8 @@ final class BasicCell: UICollectionViewCell {
         
         clipsToBounds = true
         layer.cornerRadius = 12
-        contentView.addSubview(textLabel)
-        textLabel.snp.makeConstraints { make in
+        contentView.addSubview(imageView)
+        imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
@@ -33,7 +32,7 @@ final class BasicCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func bind(text: String) {
-        textLabel.text = text
+    func bind(imageUrl: URL?) {
+        imageView.sd_setImage(with: imageUrl)
     }
 }

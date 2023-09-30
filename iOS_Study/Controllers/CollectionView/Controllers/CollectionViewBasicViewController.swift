@@ -20,6 +20,13 @@ class CollectionViewBasicViewController: UIViewController {
     }()
     private let cellSpace: CGFloat = 10
     private let numberOfColumn: CGFloat = 2
+    
+    private var size: Int {
+        (100...800).randomElement()!
+    }
+    
+    private lazy var dataSource = (1...30)
+        .compactMap { _ in URL(string: "https://random.imagecdn.app/\(size)/\(size)") }
 
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -42,12 +49,12 @@ class CollectionViewBasicViewController: UIViewController {
 //MARK: - UICollectionViewDataSource
 extension CollectionViewBasicViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return dataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "basicCell", for: indexPath) as! BasicCell
-        cell.bind(text: "Cell \(indexPath.row)")
+        cell.bind(imageUrl: dataSource[indexPath.row])
         return cell
     }
     
