@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF99929F2ACABDF20090472E /* DiffableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF99929E2ACABDF20090472E /* DiffableViewController.swift */; };
+		CF9992A12ACAC05F0090472E /* DiffableDataSourceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9992A02ACAC05F0090472E /* DiffableDataSourceSection.swift */; };
 		CFDF33812AC82A0E009AB07F /* CollectionViewBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33802AC82A0E009AB07F /* CollectionViewBasicViewController.swift */; };
 		CFDF33842AC82AD8009AB07F /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33832AC82AD8009AB07F /* BasicCell.swift */; };
 		CFDF33872AC83E2D009AB07F /* ManySectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33862AC83E2D009AB07F /* ManySectionViewController.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF99929E2ACABDF20090472E /* DiffableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewController.swift; sourceTree = "<group>"; };
+		CF9992A02ACAC05F0090472E /* DiffableDataSourceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourceSection.swift; sourceTree = "<group>"; };
 		CFDF33802AC82A0E009AB07F /* CollectionViewBasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBasicViewController.swift; sourceTree = "<group>"; };
 		CFDF33832AC82AD8009AB07F /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 		CFDF33862AC83E2D009AB07F /* ManySectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManySectionViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 			path = Subject;
 			sourceTree = "<group>";
 		};
+		CF9992A22ACAC0700090472E /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				CFDF33912AC854CE009AB07F /* MySection.swift */,
+				CF9992A02ACAC05F0090472E /* DiffableDataSourceSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
 		CFDF33822AC82A1C009AB07F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,7 @@
 				CFDF33862AC83E2D009AB07F /* ManySectionViewController.swift */,
 				CFDF338A2AC846D7009AB07F /* HorizonViewController.swift */,
 				CFDF338F2AC853CF009AB07F /* CompositionalViewController.swift */,
+				CF99929E2ACABDF20090472E /* DiffableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -161,7 +175,7 @@
 				CFDF33822AC82A1C009AB07F /* Controllers */,
 				CFDF33852AC82ADF009AB07F /* Cell */,
 				CFDF338E2AC849E8009AB07F /* ReusableView */,
-				CFDF33912AC854CE009AB07F /* MySection.swift */,
+				CF9992A22ACAC0700090472E /* Section */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -245,6 +259,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF1B0412AC176BF00F5942F /* DynamicHeightCell.swift in Sources */,
+				CF9992A12ACAC05F0090472E /* DiffableDataSourceSection.swift in Sources */,
+				CF99929F2ACABDF20090472E /* DiffableViewController.swift in Sources */,
 				CFDF338D2AC849E3009AB07F /* MyFooterView.swift in Sources */,
 				CFDF33922AC854CE009AB07F /* MySection.swift in Sources */,
 				CFF1B0192AC1719D00F5942F /* AppDelegate.swift in Sources */,

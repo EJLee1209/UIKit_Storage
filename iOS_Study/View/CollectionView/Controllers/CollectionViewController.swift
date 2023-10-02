@@ -69,6 +69,8 @@ extension CollectionViewController: UITableViewDelegate {
             toVC = HorizonViewController()
         case .compositional:
             toVC = CompositionalViewController()
+        case .diffableDataSource:
+            toVC = DiffableViewController()
         }
         
         navigationController?.pushViewController(toVC, animated: true)

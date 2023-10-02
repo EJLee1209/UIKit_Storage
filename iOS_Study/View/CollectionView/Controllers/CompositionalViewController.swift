@@ -102,7 +102,6 @@ extension CompositionalViewController {
                 let scale = max(maxScale - (distanceFromCenter / env.container.contentSize.width), minScale)
                 item.transform = CGAffineTransform(scaleX: scale, y: scale)
             }
-            
         }
         
         

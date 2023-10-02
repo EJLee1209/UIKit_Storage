@@ -13,4 +13,5 @@ enum CollectionViewSubject: String, CaseIterable {
     case manySection = "Many Section"
     case horizontal = "Horizontal Scrolling"
     case compositional = "CompositionalLayout"
+    case diffableDataSource = "DiffableDataSource"
 }
