@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CompositionalViewController: UIViewController {
+final class CompositionalViewController: UIViewController {
     
     private lazy var collectionView: UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
@@ -26,6 +26,7 @@ class CompositionalViewController: UIViewController {
         MySection.second((1...6).compactMap { _ in URL(string: "https://random.imagecdn.app/\(size)/\(size)") }),
         MySection.third((1...3).compactMap { _ in URL(string: "https://random.imagecdn.app/\(size)/\(size)") }),
         MySection.fourth((1...25).compactMap { _ in URL(string: "https://random.imagecdn.app/\(size)/\(size)") }),
+        MySection.fifth((1...12).compactMap { _ in URL(string: "https://random.imagecdn.app/\(size)/\(size)") }),
     ]
     private let layoutInset: CGFloat = 10
     
@@ -49,6 +50,12 @@ class CompositionalViewController: UIViewController {
         
     }
     
+}
+
+
+
+//MARK: - Compositional Layout
+extension CompositionalViewController {
     private func makeCollectionViewLayout() -> UICollectionViewCompositionalLayout {
         return UICollectionViewCompositionalLayout { section, env -> NSCollectionLayoutSection? in
             switch self.sectionItems[section] {
@@ -60,8 +67,8 @@ class CompositionalViewController: UIViewController {
                 return self.makeThridSectionLayout()
             case .fourth:
                 return self.makeFourthSectionLayout()
-            default:
-                return nil
+            case .fifth:
+                return self.makeFifthSectionLayout()
             }
         }
     }
@@ -104,7 +111,6 @@ class CompositionalViewController: UIViewController {
     }
     
     private func makeSecondSectionLayout() -> NSCollectionLayoutSection? {
-        
         // item
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
@@ -197,6 +203,55 @@ class CompositionalViewController: UIViewController {
         return section
     }
     
+    private func makeFifthSectionLayout() -> NSCollectionLayoutSection? {
+        let innerInset: CGFloat = 1.5
+        /// Large Item
+        let largeItemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .fractionalHeight(0.6))
+        let largeItem = NSCollectionLayoutItem(layoutSize: largeItemSize)
+        largeItem.contentInsets = .init(top: 0, leading: 0, bottom: innerInset, trailing: 0)
+        
+        /// inner Small Item
+        let innerSmallItemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.4),
+            heightDimension: .fractionalHeight(1))
+        let innerSmallItem = NSCollectionLayoutItem(layoutSize: innerSmallItemSize)
+        innerSmallItem.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: innerInset)
+        
+        /// inner Large Item
+        let innerLargeItemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(0.6),
+            heightDimension: .fractionalHeight(1))
+        let innerLargeItem = NSCollectionLayoutItem(layoutSize: innerLargeItemSize)
+        
+        /// inner Group
+        let innerGroupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .fractionalHeight(0.4))
+        
+        let innerGroup = NSCollectionLayoutGroup.horizontal(
+            layoutSize: innerGroupSize,
+            subitems: [innerSmallItem, innerLargeItem])
+        
+        /// Outer Group
+        let outerGroupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .fractionalHeight(0.8))
+        let outerGroup = NSCollectionLayoutGroup.vertical(layoutSize: outerGroupSize, subitems: [largeItem, innerGroup])
+        outerGroup.contentInsets = .init(top: 0, leading: 0, bottom: innerInset, trailing: 0)
+        
+        /// Section
+        let section = NSCollectionLayoutSection(group: outerGroup)
+        section.contentInsets = .init(top: layoutInset, leading: 0, bottom: 0, trailing: 0)
+        
+        /// Header
+        let header = makeHeaderView()
+        section.boundarySupplementaryItems = [header]
+        
+        return section
+    }
+    
     private func makeHeaderView() -> NSCollectionLayoutBoundarySupplementaryItem {
         let headerSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
@@ -208,6 +263,7 @@ class CompositionalViewController: UIViewController {
             
         return header
     }
+    
     
 }
 
@@ -227,8 +283,8 @@ extension CompositionalViewController: UICollectionViewDataSource {
             return sectionItem.count
         case .fourth(let sectionItem):
             return sectionItem.count
-        default:
-            return 0
+        case .fifth(let sectionItem):
+            return sectionItem.count
         }
     }
     
@@ -244,8 +300,8 @@ extension CompositionalViewController: UICollectionViewDataSource {
             cell.bind(imageUrl: sectionItem[indexPath.row])
         case .fourth(let sectionItem):
             cell.bind(imageUrl: sectionItem[indexPath.row])
-        default:
-            return UICollectionViewCell()
+        case .fifth(let sectionItem):
+            cell.bind(imageUrl: sectionItem[indexPath.row])
         }
         
         return cell
@@ -271,6 +327,8 @@ extension CompositionalViewController: UICollectionViewDataSource {
                 headerView.bind(text: "Third Section")
             case .fourth:
                 headerView.bind(text: "Fourth Section")
+            case .fifth:
+                headerView.bind(text: "Fifth Section")
             default:
                 return UICollectionReusableView()
             }

@@ -13,6 +13,7 @@ final class BasicCell: UICollectionViewCell {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.backgroundColor = .lightGray
+        iv.clipsToBounds = true
         return iv
     }()
     
@@ -21,9 +22,6 @@ final class BasicCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .systemBlue
-        clipsToBounds = true
-        layer.cornerRadius = 12
         contentView.addSubview(imageView)
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
