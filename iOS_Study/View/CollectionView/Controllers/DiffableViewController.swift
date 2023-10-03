@@ -12,7 +12,7 @@ class DiffableViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.register(BasicCell.self, forCellWithReuseIdentifier: BasicCell.identifier)
+        cv.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.identifier)
         cv.register(MyHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MyHeaderView.identifier)
         cv.delegate = self
         return cv
@@ -64,11 +64,11 @@ extension DiffableViewController {
         dataSource = .init(collectionView: self.collectionView, cellProvider: { collectionView, indexPath, item in
             switch item {
             case .firstItem(let item):
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BasicCell.identifier, for: indexPath) as! BasicCell
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.identifier, for: indexPath) as! ImageCell
                 cell.bind(imageUrl: item.url)
                 return cell
             case .secondItem(let item):
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BasicCell.identifier, for: indexPath) as! BasicCell
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.identifier, for: indexPath) as! ImageCell
                 cell.bind(imageUrl: item.url)
                 return cell
             }

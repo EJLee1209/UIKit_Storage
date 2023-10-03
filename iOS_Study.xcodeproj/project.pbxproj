@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		CF99929F2ACABDF20090472E /* DiffableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF99929E2ACABDF20090472E /* DiffableViewController.swift */; };
 		CF9992A12ACAC05F0090472E /* DiffableDataSourceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9992A02ACAC05F0090472E /* DiffableDataSourceSection.swift */; };
+		CFC0B48B2ACBF8D000BCA55F /* StickyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0B48A2ACBF8D000BCA55F /* StickyHeaderViewController.swift */; };
+		CFD1504D2ACC43D6002759F9 /* StickyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD1504C2ACC43D6002759F9 /* StickyHeaderView.swift */; };
 		CFDF33812AC82A0E009AB07F /* CollectionViewBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33802AC82A0E009AB07F /* CollectionViewBasicViewController.swift */; };
-		CFDF33842AC82AD8009AB07F /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33832AC82AD8009AB07F /* BasicCell.swift */; };
+		CFDF33842AC82AD8009AB07F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33832AC82AD8009AB07F /* ImageCell.swift */; };
 		CFDF33872AC83E2D009AB07F /* ManySectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33862AC83E2D009AB07F /* ManySectionViewController.swift */; };
 		CFDF33892AC84347009AB07F /* MyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33882AC84347009AB07F /* MyHeaderView.swift */; };
 		CFDF338B2AC846D7009AB07F /* HorizonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF338A2AC846D7009AB07F /* HorizonViewController.swift */; };
@@ -35,8 +37,10 @@
 /* Begin PBXFileReference section */
 		CF99929E2ACABDF20090472E /* DiffableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewController.swift; sourceTree = "<group>"; };
 		CF9992A02ACAC05F0090472E /* DiffableDataSourceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourceSection.swift; sourceTree = "<group>"; };
+		CFC0B48A2ACBF8D000BCA55F /* StickyHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderViewController.swift; sourceTree = "<group>"; };
+		CFD1504C2ACC43D6002759F9 /* StickyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderView.swift; sourceTree = "<group>"; };
 		CFDF33802AC82A0E009AB07F /* CollectionViewBasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBasicViewController.swift; sourceTree = "<group>"; };
-		CFDF33832AC82AD8009AB07F /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		CFDF33832AC82AD8009AB07F /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		CFDF33862AC83E2D009AB07F /* ManySectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManySectionViewController.swift; sourceTree = "<group>"; };
 		CFDF33882AC84347009AB07F /* MyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeaderView.swift; sourceTree = "<group>"; };
 		CFDF338A2AC846D7009AB07F /* HorizonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				CFDF338A2AC846D7009AB07F /* HorizonViewController.swift */,
 				CFDF338F2AC853CF009AB07F /* CompositionalViewController.swift */,
 				CF99929E2ACABDF20090472E /* DiffableViewController.swift */,
+				CFC0B48A2ACBF8D000BCA55F /* StickyHeaderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF1B0402AC176BF00F5942F /* DynamicHeightCell.swift */,
-				CFDF33832AC82AD8009AB07F /* BasicCell.swift */,
+				CFDF33832AC82AD8009AB07F /* ImageCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				CFDF33852AC82ADF009AB07F /* Cell */,
 				CFDF338E2AC849E8009AB07F /* ReusableView */,
 				CF9992A22ACAC0700090472E /* Section */,
+				CFD1504C2ACC43D6002759F9 /* StickyHeaderView.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF1B0412AC176BF00F5942F /* DynamicHeightCell.swift in Sources */,
+				CFD1504D2ACC43D6002759F9 /* StickyHeaderView.swift in Sources */,
 				CF9992A12ACAC05F0090472E /* DiffableDataSourceSection.swift in Sources */,
 				CF99929F2ACABDF20090472E /* DiffableViewController.swift in Sources */,
 				CFDF338D2AC849E3009AB07F /* MyFooterView.swift in Sources */,
@@ -266,13 +273,14 @@
 				CFF1B0192AC1719D00F5942F /* AppDelegate.swift in Sources */,
 				CFF1B01B2AC1719D00F5942F /* SceneDelegate.swift in Sources */,
 				CFDF33902AC853CF009AB07F /* CompositionalViewController.swift in Sources */,
+				CFC0B48B2ACBF8D000BCA55F /* StickyHeaderViewController.swift in Sources */,
 				CFF1B0372AC1749300F5942F /* StudySubject.swift in Sources */,
 				CFF1B02E2AC1720A00F5942F /* RootViewController.swift in Sources */,
 				CFF1B03A2AC174D500F5942F /* CollectionViewController.swift in Sources */,
 				CFDF33892AC84347009AB07F /* MyHeaderView.swift in Sources */,
 				CFF1B0432AC180A900F5942F /* AnimationViewController.swift in Sources */,
 				CFF1B03E2AC1762600F5942F /* DynamicHeightCollectionViewController.swift in Sources */,
-				CFDF33842AC82AD8009AB07F /* BasicCell.swift in Sources */,
+				CFDF33842AC82AD8009AB07F /* ImageCell.swift in Sources */,
 				CFDF338B2AC846D7009AB07F /* HorizonViewController.swift in Sources */,
 				CFDF33812AC82A0E009AB07F /* CollectionViewBasicViewController.swift in Sources */,
 				CFF1B03C2AC1759B00F5942F /* CollectionViewSubject.swift in Sources */,

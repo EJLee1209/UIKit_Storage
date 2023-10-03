@@ -71,6 +71,8 @@ extension CollectionViewController: UITableViewDelegate {
             toVC = CompositionalViewController()
         case .diffableDataSource:
             toVC = DiffableViewController()
+        case .stickyHeader:
+            toVC = StickyHeaderViewController()
         }
         
         navigationController?.pushViewController(toVC, animated: true)

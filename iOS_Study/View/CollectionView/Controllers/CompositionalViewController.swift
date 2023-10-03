@@ -12,7 +12,7 @@ final class CompositionalViewController: UIViewController {
     private lazy var collectionView: UICollectionView = {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: makeCollectionViewLayout())
         cv.dataSource = self
-        cv.register(BasicCell.self, forCellWithReuseIdentifier: BasicCell.identifier)
+        cv.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.identifier)
         cv.register(MyHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MyHeaderView.identifier)
         return cv
     }()
@@ -289,7 +289,7 @@ extension CompositionalViewController: UICollectionViewDataSource {
     
     /// Cell 꺼내기
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BasicCell.identifier, for: indexPath) as! BasicCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.identifier, for: indexPath) as! ImageCell
         switch sectionItems[indexPath.section] {
         case .first(let sectionItem):
             cell.bind(imageUrl: sectionItem[indexPath.row])
