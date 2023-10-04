@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ImageCell: UICollectionViewCell {
+final class BasicCell: UICollectionViewCell {
     
     private let imageView: UIImageView = {
         let iv = UIImageView()
@@ -15,6 +15,13 @@ final class ImageCell: UICollectionViewCell {
         iv.backgroundColor = .lightGray
         iv.clipsToBounds = true
         return iv
+    }()
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 20)
+        label.textAlignment = .center
+        return label
     }()
     
     static let identifier = "BasicCell"
@@ -26,6 +33,10 @@ final class ImageCell: UICollectionViewCell {
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        contentView.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -33,6 +44,11 @@ final class ImageCell: UICollectionViewCell {
     }
     
     func bind(imageUrl: URL?) {
+        
         imageView.sd_setImage(with: imageUrl)
+    }
+    
+    func bind(label: String) {
+        self.titleLabel.text = label
     }
 }
