@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF0DAFA22ACE7B4700E071FC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0DAFA12ACE7B4700E071FC /* AlertViewController.swift */; };
 		CF99929F2ACABDF20090472E /* DiffableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF99929E2ACABDF20090472E /* DiffableViewController.swift */; };
 		CF9992A12ACAC05F0090472E /* DiffableDataSourceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9992A02ACAC05F0090472E /* DiffableDataSourceSection.swift */; };
 		CFBA8A762ACD4EAA009FE7C8 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA8A752ACD4EAA009FE7C8 /* BannerViewController.swift */; };
@@ -32,10 +33,10 @@
 		CFF1B03C2AC1759B00F5942F /* CollectionViewSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1B03B2AC1759B00F5942F /* CollectionViewSubject.swift */; };
 		CFF1B03E2AC1762600F5942F /* DynamicHeightCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1B03D2AC1762600F5942F /* DynamicHeightCollectionViewController.swift */; };
 		CFF1B0412AC176BF00F5942F /* DynamicHeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1B0402AC176BF00F5942F /* DynamicHeightCell.swift */; };
-		CFF1B0432AC180A900F5942F /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1B0422AC180A900F5942F /* AnimationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF0DAFA12ACE7B4700E071FC /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		CF99929E2ACABDF20090472E /* DiffableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewController.swift; sourceTree = "<group>"; };
 		CF9992A02ACAC05F0090472E /* DiffableDataSourceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourceSection.swift; sourceTree = "<group>"; };
 		CFBA8A752ACD4EAA009FE7C8 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
@@ -61,7 +62,6 @@
 		CFF1B03B2AC1759B00F5942F /* CollectionViewSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSubject.swift; sourceTree = "<group>"; };
 		CFF1B03D2AC1762600F5942F /* DynamicHeightCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCollectionViewController.swift; sourceTree = "<group>"; };
 		CFF1B0402AC176BF00F5942F /* DynamicHeightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCell.swift; sourceTree = "<group>"; };
-		CFF1B0422AC180A900F5942F /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,9 +170,9 @@
 			isa = PBXGroup;
 			children = (
 				CFF1B02D2AC1720A00F5942F /* RootViewController.swift */,
+				CF0DAFA12ACE7B4700E071FC /* AlertViewController.swift */,
 				CF92B7042AC85D4C00E851CE /* Subject */,
 				CFF1B03F2AC1762C00F5942F /* CollectionView */,
-				CFF1B0422AC180A900F5942F /* AnimationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -274,6 +274,7 @@
 				CFDF338D2AC849E3009AB07F /* MyFooterView.swift in Sources */,
 				CFDF33922AC854CE009AB07F /* MySection.swift in Sources */,
 				CFF1B0192AC1719D00F5942F /* AppDelegate.swift in Sources */,
+				CF0DAFA22ACE7B4700E071FC /* AlertViewController.swift in Sources */,
 				CFBA8A762ACD4EAA009FE7C8 /* BannerViewController.swift in Sources */,
 				CFF1B01B2AC1719D00F5942F /* SceneDelegate.swift in Sources */,
 				CFDF33902AC853CF009AB07F /* CompositionalViewController.swift in Sources */,
@@ -282,7 +283,6 @@
 				CFF1B02E2AC1720A00F5942F /* RootViewController.swift in Sources */,
 				CFF1B03A2AC174D500F5942F /* CollectionViewController.swift in Sources */,
 				CFDF33892AC84347009AB07F /* MyHeaderView.swift in Sources */,
-				CFF1B0432AC180A900F5942F /* AnimationViewController.swift in Sources */,
 				CFF1B03E2AC1762600F5942F /* DynamicHeightCollectionViewController.swift in Sources */,
 				CFDF33842AC82AD8009AB07F /* BasicCell.swift in Sources */,
 				CFDF338B2AC846D7009AB07F /* HorizonViewController.swift in Sources */,

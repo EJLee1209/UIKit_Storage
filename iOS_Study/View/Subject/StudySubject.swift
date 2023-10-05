@@ -9,5 +9,5 @@ import Foundation
 
 enum StudySubject: String, CaseIterable {
     case CollectionView
-    case animation
+    case alert
 }

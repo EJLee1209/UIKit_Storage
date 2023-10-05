@@ -57,15 +57,15 @@ extension RootViewController: UITableViewDataSource {
 extension RootViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
+        var toVC: UIViewController!
         
         switch StudySubject.allCases[indexPath.row] {
         case .CollectionView:
-            let toVC = CollectionViewController()
-            navigationController?.pushViewController(toVC, animated: true)
-        case .animation:
-            let toVC = AnimationViewController()
-            navigationController?.pushViewController(toVC, animated: true)
+            toVC = CollectionViewController()
+        case .alert:
+            toVC = AlertViewController()
         }
+        
+        navigationController?.pushViewController(toVC, animated: true)
     }
 }
