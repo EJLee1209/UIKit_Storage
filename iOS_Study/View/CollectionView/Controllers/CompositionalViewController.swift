@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class CompositionalViewController: UIViewController {
     
@@ -339,4 +340,11 @@ extension CompositionalViewController: UICollectionViewDataSource {
         }
     }
     
+}
+
+
+struct CompositionalViewController_PreViews: PreviewProvider {
+    static var previews: some View {
+        CompositionalViewController().toPreview()
+    }
 }

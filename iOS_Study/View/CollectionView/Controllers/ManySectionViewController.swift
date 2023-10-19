@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 
 
@@ -203,5 +204,11 @@ extension ManySectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return CGSize(width: self.view.frame.width, height: 50)
+    }
+}
+
+struct ManySectionViewController_PreViews: PreviewProvider {
+    static var previews: some View {
+        ManySectionViewController().toPreview()
     }
 }

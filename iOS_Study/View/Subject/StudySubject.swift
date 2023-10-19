@@ -10,4 +10,5 @@ import Foundation
 enum StudySubject: String, CaseIterable {
     case CollectionView
     case alert
+    case customView
 }
