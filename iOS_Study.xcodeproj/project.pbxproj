@@ -10,6 +10,8 @@
 		CF0DAFA22ACE7B4700E071FC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0DAFA12ACE7B4700E071FC /* AlertViewController.swift */; };
 		CF6684012AE0DADB0074876F /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6684002AE0DADB0074876F /* CustomViewController.swift */; };
 		CF6684032AE0DB610074876F /* CustomViewSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6684022AE0DB610074876F /* CustomViewSubject.swift */; };
+		CF6684052AE109A90074876F /* ToggleSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6684042AE109A90074876F /* ToggleSwitchViewController.swift */; };
+		CF6684092AE10A1A0074876F /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6684082AE10A1A0074876F /* ToggleView.swift */; };
 		CF899BEC2AD82B5D0001A166 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF899BEB2AD82B5D0001A166 /* Extension+UIViewController.swift */; };
 		CF99929F2ACABDF20090472E /* DiffableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF99929E2ACABDF20090472E /* DiffableViewController.swift */; };
 		CF9992A12ACAC05F0090472E /* DiffableDataSourceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9992A02ACAC05F0090472E /* DiffableDataSourceSection.swift */; };
@@ -44,6 +46,8 @@
 		CF0DAFA12ACE7B4700E071FC /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		CF6684002AE0DADB0074876F /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		CF6684022AE0DB610074876F /* CustomViewSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewSubject.swift; sourceTree = "<group>"; };
+		CF6684042AE109A90074876F /* ToggleSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSwitchViewController.swift; sourceTree = "<group>"; };
+		CF6684082AE10A1A0074876F /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		CF899BEB2AD82B5D0001A166 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		CF99929E2ACABDF20090472E /* DiffableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewController.swift; sourceTree = "<group>"; };
 		CF9992A02ACAC05F0090472E /* DiffableDataSourceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourceSection.swift; sourceTree = "<group>"; };
@@ -87,6 +91,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF6684062AE109FF0074876F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF6684002AE0DADB0074876F /* CustomViewController.swift */,
+				CFCBA1C22ADFC6310004BEC5 /* SliderViewController.swift */,
+				CF6684042AE109A90074876F /* ToggleSwitchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CF6684072AE10A0B0074876F /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				CFCBA1C52ADFC68C0004BEC5 /* SliderView.swift */,
+				CF6684082AE10A1A0074876F /* ToggleView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		CF899BEA2AD82B500001A166 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,9 +140,8 @@
 		CFCBA1C42ADFC6760004BEC5 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				CF6684002AE0DADB0074876F /* CustomViewController.swift */,
-				CFCBA1C22ADFC6310004BEC5 /* SliderViewController.swift */,
-				CFCBA1C52ADFC68C0004BEC5 /* SliderView.swift */,
+				CF6684072AE10A0B0074876F /* CustomView */,
+				CF6684062AE109FF0074876F /* ViewController */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -314,10 +336,12 @@
 				CFF1B0372AC1749300F5942F /* StudySubject.swift in Sources */,
 				CFF1B02E2AC1720A00F5942F /* RootViewController.swift in Sources */,
 				CFF1B03A2AC174D500F5942F /* CollectionViewController.swift in Sources */,
+				CF6684092AE10A1A0074876F /* ToggleView.swift in Sources */,
 				CFCBA1C32ADFC6310004BEC5 /* SliderViewController.swift in Sources */,
 				CFDF33892AC84347009AB07F /* MyHeaderView.swift in Sources */,
 				CF6684032AE0DB610074876F /* CustomViewSubject.swift in Sources */,
 				CFF1B03E2AC1762600F5942F /* DynamicHeightCollectionViewController.swift in Sources */,
+				CF6684052AE109A90074876F /* ToggleSwitchViewController.swift in Sources */,
 				CF6684012AE0DADB0074876F /* CustomViewController.swift in Sources */,
 				CFDF33842AC82AD8009AB07F /* BasicCell.swift in Sources */,
 				CFDF338B2AC846D7009AB07F /* HorizonViewController.swift in Sources */,

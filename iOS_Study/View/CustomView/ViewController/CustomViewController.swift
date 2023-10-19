@@ -62,6 +62,8 @@ extension CustomViewController: UITableViewDelegate {
         switch CustomViewSubject.allCases[indexPath.row] {
         case .slider:
             toVC = SliderViewController()
+        case .toggleSwitch:
+            toVC = ToggleSwitchViewController()
         }
         
         navigationController?.pushViewController(toVC, animated: true)

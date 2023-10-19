@@ -18,7 +18,7 @@ final class SliderViewController: UIViewController {
         return label
     }()
     
-    private let sliderView: SliderView = .init(maxValue: 5)
+    private let sliderView: SliderView = .init(maxValue: 4)
     
     
     //MARK: - LifeCycle
@@ -44,10 +44,9 @@ final class SliderViewController: UIViewController {
         
         
     }
-    
-    
 }
 
+//MARK: - SliderViewDelegate
 extension SliderViewController: SliderViewDelegate {
     func sliderView(_ sender: SliderView, changedValue value: Int) {
         mainLabel.text = "\(value)"

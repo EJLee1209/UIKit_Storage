@@ -9,5 +9,5 @@ import Foundation
 
 enum CustomViewSubject: String, CaseIterable {
     case slider = "Custom Slider"
-    
+    case toggleSwitch = "Custom Toggle Switch"
 }
