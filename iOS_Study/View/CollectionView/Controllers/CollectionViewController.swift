@@ -73,9 +73,12 @@ extension CollectionViewController: UITableViewDelegate {
             toVC = DiffableViewController()
         case .stickyHeader:
             toVC = StickyHeaderViewController()
+        case .banner:
+            toVC = BannerViewController()
         }
         
         navigationController?.pushViewController(toVC, animated: true)
     }
 }
+
 

@@ -14,7 +14,7 @@ class HorizonViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.identifier)
+        cv.register(BasicCell.self, forCellWithReuseIdentifier: BasicCell.identifier)
         cv.dataSource = self
         cv.delegate = self
         cv.showsHorizontalScrollIndicator = false
@@ -59,7 +59,7 @@ extension HorizonViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.identifier, for: indexPath) as! ImageCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BasicCell.identifier, for: indexPath) as! BasicCell
         cell.bind(imageUrl: dataSource[indexPath.row])
         return cell
     }

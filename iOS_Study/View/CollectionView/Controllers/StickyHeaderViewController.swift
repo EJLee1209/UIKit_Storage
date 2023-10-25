@@ -17,7 +17,7 @@ class StickyHeaderViewController: UIViewController {
         cv.backgroundColor = .clear
         cv.contentInsetAdjustmentBehavior = .never
         cv.contentInset = .init(top: headerHeight, left: 0, bottom: 0, right: 0)
-        cv.register(ImageCell.self, forCellWithReuseIdentifier: ImageCell.identifier)
+        cv.register(BasicCell.self, forCellWithReuseIdentifier: BasicCell.identifier)
         cv.register(MyHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: MyHeaderView.identifier)
         cv.dataSource = self
         cv.delegate = self
@@ -33,8 +33,8 @@ class StickyHeaderViewController: UIViewController {
     }()
     
     private let stickyView: StickyHeaderView = .init()
-    var stickyViewFrame: CGRect?
     
+    private var stickyViewFrame: CGRect?
     private let headerHeight = 300.0
     
     //MARK: - LifeCycle
@@ -104,7 +104,7 @@ extension StickyHeaderViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCell.identifier, for: indexPath) as! ImageCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BasicCell.identifier, for: indexPath) as! BasicCell
         return cell
     }
     
@@ -164,13 +164,13 @@ extension StickyHeaderViewController: UICollectionViewDelegate {
         }
         
         print("DEBUG scrollview offset y : \(scrollView.contentOffset.y)")
-        guard let frame = stickyViewFrame else { return }
+        guard let stickyFrame = stickyViewFrame else { return }
         
         let statusBarHeight = view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
         let navigationBarHeight = navigationController?.navigationBar.frame.height ?? 0
         let topSafeAreaInsetHeight = statusBarHeight + navigationBarHeight
         
-        let stickyViewOffsetY = frame.minY - topSafeAreaInsetHeight
+        let stickyViewOffsetY = stickyFrame.minY - topSafeAreaInsetHeight
         
         let stickyViewIsHidden = scrollView.contentOffset.y < stickyViewOffsetY
         self.stickyView.isHidden = stickyViewIsHidden

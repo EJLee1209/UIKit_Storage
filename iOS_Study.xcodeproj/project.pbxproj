@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF0DAFA22ACE7B4700E071FC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0DAFA12ACE7B4700E071FC /* AlertViewController.swift */; };
+		CF6684012AE0DADB0074876F /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6684002AE0DADB0074876F /* CustomViewController.swift */; };
+		CF6684032AE0DB610074876F /* CustomViewSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6684022AE0DB610074876F /* CustomViewSubject.swift */; };
+		CF6684052AE109A90074876F /* ToggleSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6684042AE109A90074876F /* ToggleSwitchViewController.swift */; };
+		CF6684092AE10A1A0074876F /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6684082AE10A1A0074876F /* ToggleView.swift */; };
+		CF899BEC2AD82B5D0001A166 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF899BEB2AD82B5D0001A166 /* Extension+UIViewController.swift */; };
 		CF99929F2ACABDF20090472E /* DiffableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF99929E2ACABDF20090472E /* DiffableViewController.swift */; };
 		CF9992A12ACAC05F0090472E /* DiffableDataSourceSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9992A02ACAC05F0090472E /* DiffableDataSourceSection.swift */; };
+		CFBA8A762ACD4EAA009FE7C8 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBA8A752ACD4EAA009FE7C8 /* BannerViewController.swift */; };
 		CFC0B48B2ACBF8D000BCA55F /* StickyHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0B48A2ACBF8D000BCA55F /* StickyHeaderViewController.swift */; };
+		CFCBA1C32ADFC6310004BEC5 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCBA1C22ADFC6310004BEC5 /* SliderViewController.swift */; };
+		CFCBA1C62ADFC68C0004BEC5 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFCBA1C52ADFC68C0004BEC5 /* SliderView.swift */; };
 		CFD1504D2ACC43D6002759F9 /* StickyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD1504C2ACC43D6002759F9 /* StickyHeaderView.swift */; };
 		CFDF33812AC82A0E009AB07F /* CollectionViewBasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33802AC82A0E009AB07F /* CollectionViewBasicViewController.swift */; };
-		CFDF33842AC82AD8009AB07F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33832AC82AD8009AB07F /* ImageCell.swift */; };
+		CFDF33842AC82AD8009AB07F /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33832AC82AD8009AB07F /* BasicCell.swift */; };
 		CFDF33872AC83E2D009AB07F /* ManySectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33862AC83E2D009AB07F /* ManySectionViewController.swift */; };
 		CFDF33892AC84347009AB07F /* MyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF33882AC84347009AB07F /* MyHeaderView.swift */; };
 		CFDF338B2AC846D7009AB07F /* HorizonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDF338A2AC846D7009AB07F /* HorizonViewController.swift */; };
@@ -31,16 +40,24 @@
 		CFF1B03C2AC1759B00F5942F /* CollectionViewSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1B03B2AC1759B00F5942F /* CollectionViewSubject.swift */; };
 		CFF1B03E2AC1762600F5942F /* DynamicHeightCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1B03D2AC1762600F5942F /* DynamicHeightCollectionViewController.swift */; };
 		CFF1B0412AC176BF00F5942F /* DynamicHeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1B0402AC176BF00F5942F /* DynamicHeightCell.swift */; };
-		CFF1B0432AC180A900F5942F /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1B0422AC180A900F5942F /* AnimationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF0DAFA12ACE7B4700E071FC /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		CF6684002AE0DADB0074876F /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		CF6684022AE0DB610074876F /* CustomViewSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewSubject.swift; sourceTree = "<group>"; };
+		CF6684042AE109A90074876F /* ToggleSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleSwitchViewController.swift; sourceTree = "<group>"; };
+		CF6684082AE10A1A0074876F /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		CF899BEB2AD82B5D0001A166 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		CF99929E2ACABDF20090472E /* DiffableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableViewController.swift; sourceTree = "<group>"; };
 		CF9992A02ACAC05F0090472E /* DiffableDataSourceSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourceSection.swift; sourceTree = "<group>"; };
+		CFBA8A752ACD4EAA009FE7C8 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		CFC0B48A2ACBF8D000BCA55F /* StickyHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderViewController.swift; sourceTree = "<group>"; };
+		CFCBA1C22ADFC6310004BEC5 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
+		CFCBA1C52ADFC68C0004BEC5 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		CFD1504C2ACC43D6002759F9 /* StickyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderView.swift; sourceTree = "<group>"; };
 		CFDF33802AC82A0E009AB07F /* CollectionViewBasicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBasicViewController.swift; sourceTree = "<group>"; };
-		CFDF33832AC82AD8009AB07F /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		CFDF33832AC82AD8009AB07F /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 		CFDF33862AC83E2D009AB07F /* ManySectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManySectionViewController.swift; sourceTree = "<group>"; };
 		CFDF33882AC84347009AB07F /* MyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeaderView.swift; sourceTree = "<group>"; };
 		CFDF338A2AC846D7009AB07F /* HorizonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +76,6 @@
 		CFF1B03B2AC1759B00F5942F /* CollectionViewSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSubject.swift; sourceTree = "<group>"; };
 		CFF1B03D2AC1762600F5942F /* DynamicHeightCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCollectionViewController.swift; sourceTree = "<group>"; };
 		CFF1B0402AC176BF00F5942F /* DynamicHeightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightCell.swift; sourceTree = "<group>"; };
-		CFF1B0422AC180A900F5942F /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,11 +91,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF6684062AE109FF0074876F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CF6684002AE0DADB0074876F /* CustomViewController.swift */,
+				CFCBA1C22ADFC6310004BEC5 /* SliderViewController.swift */,
+				CF6684042AE109A90074876F /* ToggleSwitchViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CF6684072AE10A0B0074876F /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				CFCBA1C52ADFC68C0004BEC5 /* SliderView.swift */,
+				CF6684082AE10A1A0074876F /* ToggleView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		CF899BEA2AD82B500001A166 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF899BEB2AD82B5D0001A166 /* Extension+UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CF92B7042AC85D4C00E851CE /* Subject */ = {
 			isa = PBXGroup;
 			children = (
 				CFF1B0362AC1749300F5942F /* StudySubject.swift */,
 				CFF1B03B2AC1759B00F5942F /* CollectionViewSubject.swift */,
+				CF6684022AE0DB610074876F /* CustomViewSubject.swift */,
 			);
 			path = Subject;
 			sourceTree = "<group>";
@@ -93,6 +137,15 @@
 			path = Section;
 			sourceTree = "<group>";
 		};
+		CFCBA1C42ADFC6760004BEC5 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				CF6684072AE10A0B0074876F /* CustomView */,
+				CF6684062AE109FF0074876F /* ViewController */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		CFDF33822AC82A1C009AB07F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +157,7 @@
 				CFDF338F2AC853CF009AB07F /* CompositionalViewController.swift */,
 				CF99929E2ACABDF20090472E /* DiffableViewController.swift */,
 				CFC0B48A2ACBF8D000BCA55F /* StickyHeaderViewController.swift */,
+				CFBA8A752ACD4EAA009FE7C8 /* BannerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -112,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				CFF1B0402AC176BF00F5942F /* DynamicHeightCell.swift */,
-				CFDF33832AC82AD8009AB07F /* ImageCell.swift */,
+				CFDF33832AC82AD8009AB07F /* BasicCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -145,6 +199,7 @@
 		CFF1B0172AC1719D00F5942F /* iOS_Study */ = {
 			isa = PBXGroup;
 			children = (
+				CF899BEA2AD82B500001A166 /* Extensions */,
 				CFF1B02C2AC171B400F5942F /* App */,
 				CFF1B0382AC174B700F5942F /* View */,
 				CFF1B0212AC1719E00F5942F /* Assets.xcassets */,
@@ -166,10 +221,11 @@
 		CFF1B0382AC174B700F5942F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CFF1B02D2AC1720A00F5942F /* RootViewController.swift */,
 				CF92B7042AC85D4C00E851CE /* Subject */,
+				CFCBA1C42ADFC6760004BEC5 /* CustomView */,
+				CFF1B02D2AC1720A00F5942F /* RootViewController.swift */,
+				CF0DAFA12ACE7B4700E071FC /* AlertViewController.swift */,
 				CFF1B03F2AC1762C00F5942F /* CollectionView */,
-				CFF1B0422AC180A900F5942F /* AnimationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,22 +324,30 @@
 				CFD1504D2ACC43D6002759F9 /* StickyHeaderView.swift in Sources */,
 				CF9992A12ACAC05F0090472E /* DiffableDataSourceSection.swift in Sources */,
 				CF99929F2ACABDF20090472E /* DiffableViewController.swift in Sources */,
+				CFCBA1C62ADFC68C0004BEC5 /* SliderView.swift in Sources */,
 				CFDF338D2AC849E3009AB07F /* MyFooterView.swift in Sources */,
 				CFDF33922AC854CE009AB07F /* MySection.swift in Sources */,
 				CFF1B0192AC1719D00F5942F /* AppDelegate.swift in Sources */,
+				CF0DAFA22ACE7B4700E071FC /* AlertViewController.swift in Sources */,
+				CFBA8A762ACD4EAA009FE7C8 /* BannerViewController.swift in Sources */,
 				CFF1B01B2AC1719D00F5942F /* SceneDelegate.swift in Sources */,
 				CFDF33902AC853CF009AB07F /* CompositionalViewController.swift in Sources */,
 				CFC0B48B2ACBF8D000BCA55F /* StickyHeaderViewController.swift in Sources */,
 				CFF1B0372AC1749300F5942F /* StudySubject.swift in Sources */,
 				CFF1B02E2AC1720A00F5942F /* RootViewController.swift in Sources */,
 				CFF1B03A2AC174D500F5942F /* CollectionViewController.swift in Sources */,
+				CF6684092AE10A1A0074876F /* ToggleView.swift in Sources */,
+				CFCBA1C32ADFC6310004BEC5 /* SliderViewController.swift in Sources */,
 				CFDF33892AC84347009AB07F /* MyHeaderView.swift in Sources */,
-				CFF1B0432AC180A900F5942F /* AnimationViewController.swift in Sources */,
+				CF6684032AE0DB610074876F /* CustomViewSubject.swift in Sources */,
 				CFF1B03E2AC1762600F5942F /* DynamicHeightCollectionViewController.swift in Sources */,
-				CFDF33842AC82AD8009AB07F /* ImageCell.swift in Sources */,
+				CF6684052AE109A90074876F /* ToggleSwitchViewController.swift in Sources */,
+				CF6684012AE0DADB0074876F /* CustomViewController.swift in Sources */,
+				CFDF33842AC82AD8009AB07F /* BasicCell.swift in Sources */,
 				CFDF338B2AC846D7009AB07F /* HorizonViewController.swift in Sources */,
 				CFDF33812AC82A0E009AB07F /* CollectionViewBasicViewController.swift in Sources */,
 				CFF1B03C2AC1759B00F5942F /* CollectionViewSubject.swift in Sources */,
+				CF899BEC2AD82B5D0001A166 /* Extension+UIViewController.swift in Sources */,
 				CFDF33872AC83E2D009AB07F /* ManySectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

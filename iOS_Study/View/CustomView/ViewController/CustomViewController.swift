@@ -1,17 +1,13 @@
 //
-//  RootViewController.swift
+//  CustomViewController.swift
 //  iOS_Study
 //
-//  Created by 이은재 on 2023/09/25.
+//  Created by 이은재 on 2023/10/19.
 //
 
-
-
 import UIKit
-import SnapKit
-import SwiftUI
 
-final class RootViewController: UIViewController {
+final class CustomViewController: UIViewController {
     
     //MARK: - Properties
     private lazy var tableView: UITableView = {
@@ -30,7 +26,7 @@ final class RootViewController: UIViewController {
     //MARK: - Helpers
     private func layout() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "iOS Study"
+        navigationItem.title = "Custom View"
         view.backgroundColor = .white
         
         view.addSubview(tableView)
@@ -42,33 +38,35 @@ final class RootViewController: UIViewController {
 }
 
 //MARK: - UITableViewDataSource
-extension RootViewController: UITableViewDataSource {
+extension CustomViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        StudySubject.allCases.count
+        return CustomViewSubject.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        cell.textLabel?.text = StudySubject.allCases[indexPath.row].rawValue
+        cell.textLabel?.text = CustomViewSubject.allCases[indexPath.row].rawValue
         return cell
     }
 }
 
-//MARK: - UITableViewDelegate
-extension RootViewController: UITableViewDelegate {
+
+extension CustomViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        var toVC: UIViewController!
         
-        switch StudySubject.allCases[indexPath.row] {
-        case .CollectionView:
-            toVC = CollectionViewController()
-        case .alert:
-            toVC = AlertViewController()
-        case .customView:
-            toVC = CustomViewController()
+        var toVC: UIViewController
+        
+        switch CustomViewSubject.allCases[indexPath.row] {
+        case .slider:
+            toVC = SliderViewController()
+        case .toggleSwitch:
+            toVC = ToggleSwitchViewController()
         }
         
         navigationController?.pushViewController(toVC, animated: true)
     }
+    
 }
